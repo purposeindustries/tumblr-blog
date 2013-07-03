@@ -1,0 +1,197 @@
+@import "reset.css";
+@import "fonts.css";
+
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Some global stuff */
+
+body {
+	background: #F3EBF6;
+	color: #2B1435;
+	font-family: 'museo_sans500';
+	text-rendering: optimizeLegibility;
+ }
+
+a {
+	text-decoration: none;
+	color: #2B1435;
+
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;    
+    transition: all 0.2s ease-in-out;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.wrapper {
+	width: 940px;
+}
+
+.rounded {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
+
+/* header */
+
+#header-container {
+	background: #ffffff;
+}
+
+header {
+	height: 78px;
+	background: #fff;
+}
+
+header #logo {
+	margin-top: 28px;
+}
+
+header nav {
+	margin-top: 32px;
+}
+
+header nav ul li {
+	display: inline;
+	text-transform: uppercase;
+	font-size: 12px;
+	padding: 10px;
+	font-family: 'museo_sans700';
+}
+
+header nav ul li a:hover {
+	color: #8E44AD;
+}
+
+/* hero */
+
+#hero-container {
+	background: #F9F1FC;
+	border-top: 1px solid #E4DBE7;
+	border-bottom: 1px solid #E4DBE7;
+}
+
+#hero {
+	height: 72px;
+	background: #F9F1FC;
+	font-family: 'museo_slab300';
+	font-size: 18px;
+	text-align: center;
+	line-height: 1.3em;
+	padding: 13px;
+}
+
+#hero h1 {
+	width: 482px;
+}
+
+#hero h1 a {
+	color: #8E44AD;
+}
+
+#hero h1 a:hover {
+	color: #29B966;
+}
+
+/* content */
+
+#main-container {
+	margin-bottom: 20px;
+}
+
+.item {
+	margin: 20px 17px 0 0;
+}
+
+.item a img {
+	border: 1px solid #DFDFDF;
+}
+
+/* pagiation */
+
+#pagination {
+	margin-top: 40px;
+	margin-bottom: 60px;
+	width: 400px;
+	text-align: center;
+}
+
+#pagination ul {
+	display: inline;
+}
+
+#pagination ul li {
+	display: inline;
+}
+
+#pagination a {
+	padding: 8px 12px 8px 12px;
+	background: #F9F1FC;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+#pagination a:hover, #pagination a:active {
+	background: #8E44AD;
+	color: #ffffff;
+
+}
+
+/* single post */
+
+#the-post {
+	width: 621px;
+	margin-top: 40px;
+}
+
+#the-post #post-stats {
+	font-size: 12px;
+	padding: 10px;
+	height: 30px;
+}
+
+#the-post #post-stats a:hover {
+	color: #8E44AD;
+}
+
+#the-post h1 {
+	font-family: 'museo_slab700';
+	text-align: center;
+	margin: 20px 0 10px 0;
+	font-size: 18px;
+}
+
+#the-post #tags {
+	font-size: 12px;
+	text-align: center;
+}
+
+#the-post .separator {
+	border-bottom: 1px solid #DFDFDF;
+	margin: 20px 0 20px 0;
+
+}
