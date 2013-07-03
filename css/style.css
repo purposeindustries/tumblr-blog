@@ -195,3 +195,21 @@ header nav ul li a:hover {
 	margin: 20px 0 20px 0;
 
 }
+
+/* about */
+
+#about {
+	margin-top: 40px;
+}
+
+#about h1 {
+	font-size: 22px;
+	font-family: 'museo_slab700';
+	margin-bottom: 30px;
+}
+
+#about p {
+	margin-bottom: 20px;
+	font-size: 16px;
+	line-height: 1.4em;
+}
