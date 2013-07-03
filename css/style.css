@@ -127,6 +127,25 @@ header nav ul li a:hover {
 	border: 1px solid #DFDFDF;
 }
 
+.social {
+    position: absolute;
+    opacity: 0;
+    top: 10px;
+    left: 10px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.item:hover .social, #the-post .content:hover .social {
+	opacity: 0.8;
+}
+
+.item, #the-post .content {
+	position: relative;
+}
+
 /* pagiation */
 
 #pagination {
