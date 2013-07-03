@@ -155,7 +155,7 @@ header nav ul li a:hover {
 	font-size: 14px;
 }
 
-#pagination a:hover, #pagination a:active {
+#pagination a:hover, #pagination a:active, #pagination a.active {
 	background: #8E44AD;
 	color: #ffffff;
 
