@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>HOME - We Love Porn // Blog</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name='text:Disqus Shortname' content='' />
+        <link rel="stylesheet" href="http://static.blog.weloveporn.co/css/style.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+   
+    <body>
+        <!-- header -->
+        <div id="header-container"> 
+            <header class="wrapper center">
+                <div id="logo" class="left"><a href="/"><img src="http://static.blog.weloveporn.co/img/logo.png" title="We Love Porn - Blog" alt="logo"/></a></div>
+                <nav class="right">
+                    <ul>
+                        <li><a href="/" target="_blank">Home</a></li>
+                        <li><a href="https://twitter.com/welovepornco" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/WeLovePorn" target="_blank">Facebook</a></li>
+                        <li><a href="/archive">Archive</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <!-- hero -->
+        <div id="hero-container">
+            <section id="hero" class="wrapper center">
+                <h1 class="center"><a href="http://weloveporn.co">weloveporn.co</a> brings porn to your tablet and mobile in ways you have not been witnessing before.</h1>
+            </section>
+        </div>          
+        
+        <!-- content -->
+        <div id="main-container">
+            <div id="main" class="wrapper center">
+                {block:Posts}
+                {block:Photo}
+                {block:IndexPage}
+                <div class="item left">
+                <div class="social">{LikeButton}{ReblogButton}</div>
+                    <a href="{Permalink}"><img class="rounded" src="{PhotoURL-250}" title="{PhotoAlt}" alt="{PhotoAlt}" style="width: 302px"/></a>
+                </div>
+                {/block:IndexPage}
+                {block:PermalinkPage}
+                <div id="the-post" class="center">  
+                    <div id="post-stats">
+                        <div class="left">
+                            <a href="#notes" class="{block:PostNotes}no-{/block:PostNotes}notes">{NoteCountWithLabel}</a>
+                            <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+                        </div>
+                       <time class="right">{block:Date}{MonthNumberWithZero}-{DayOfMonthWithZero}-{Year}{/block:Date}</time> 
+                    </div>
+
+                    <div class="content">
+                        <div class="social">{LikeButton}{ReblogButton}</div>
+                        <a href="{LinkURL}"><img style="width: 621px"class="rounded" src="{PhotoURL-500}" title="gif-title" alt="gif-anim" /></a>
+                    </div>
+
+                    <h1>{Caption}</h1>
+
+                    <div id="tags">
+                        {block:Tags}<a href="{TagURL}">#{Tag}</a>
+                        {/block:Tags}
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <div>
+                        <h1>Let's discuss</h1>
+                        {block:IfDisqusShortname}
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                            var disqus_shortname = '{text:Disqus Shortname}';
+                            (function() {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                            (function () {
+                                var s = document.createElement('script'); s.async = true;
+                                s.type = 'text/javascript';
+                                s.onload = function() {
+                                    var e = document.getElementsByClassName('dsq-comment-count')[0];
+                                    var old = DISQUSWIDGETS.displayCount;
+                                    DISQUSWIDGETS.displayCount = function() {
+                                        old.apply(DISQUSWIDGETS, arguments);
+                                        e.innerHTML = e.innerHTML.replace(/(\d+) Comments? and (\d+) Reactions?/, '- $1 Comments - $2 Reactions');
+                                    }
+                                }
+                                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                            }());
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        {/block:IfDisqusShortname}
+                    </div>
+
+                     <div class="separator"></div>
+                     <div id="notes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+                </div>
+                {/block:PermalinkPage}
+                {/block:Photo}
+                {/block:Posts}
+            
+             <div style="clear:both"></div>
+            {block:Pagination}
+            <!-- pagination -->
+            <section id="pagination" class="wrapper center">
+                {block:PreviousPage}<a href="{PreviousPage}">Previous</a>{/block:PreviousPage}
+                <ul>
+                    {block:JumpPagination length="4"}
+                    {block:CurrentPage}<li><a href="{URL}" class="active">{PageNumber}</a></li>{/block:CurrentPage}
+                    {block:JumpPage}<li><a href="{URL}">{PageNumber}</a></li>{/block:JumpPage}
+                    {/block:JumpPagination}
+                </ul>
+                {block:NextPage}<a href="{NextPage}">Next</a>{/block:NextPage}
+            </section>
+            {/block:Pagination}
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>  
+        <script>
+            $( document ).ready(function() {
+                $('.item:nth-child(3n+3)').css({ marginRight: '0px' });
+            });
+            
+        </script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-42163835-2', 'weloveporn.co');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
