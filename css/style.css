@@ -120,7 +120,8 @@ header nav ul li a:hover {
 }
 
 .item {
-	margin: 20px 17px 0 0;
+	width: 30%;
+  margin: 0;
 }
 
 .item a img {
