@@ -117,6 +117,7 @@ header nav ul li a:hover {
 
 #main-container {
 	margin-bottom: 20px;
+  padding-top: 3px;
 }
 
 .item {
